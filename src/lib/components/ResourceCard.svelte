@@ -5,7 +5,6 @@
   export let html = "";
   export let logo = "";
   export let internalLink = "";
-  console.log(internalLink)
 </script>
 
 <div class="card">

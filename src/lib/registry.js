@@ -1,12 +1,6 @@
 // This file is the authoritative source for specs and documentation within the app. This can be extended in the future.
 
 const KhronosGroup = {
-  _metadata: {
-    name: "Khronos Group",
-    description: "",
-    logo: "https://www.khronos.org/assets/images/api_logos/khronos.svg",
-    internalLink: "/specifications/KhronosGroup"
-  },
   "3D_Commerce": {
     name: "3D Commerce",
     description: "Universal guidelines, standards and certifications for 3D content creation and distribution in e-commerce",
@@ -149,6 +143,16 @@ const KhronosGroup = {
   },
 }
 
-export const Specifications = {
-  KhronosGroup
+const Groups = {
+  KhronosGroup: {
+    name: "Khronos Group",
+    description: "The Khronos Group, Inc. is an open, non-profit, member-driven consortium of 170 organizations developing, publishing and maintaining royalty-free interoperability standards for 3D graphics, virtual reality, augmented reality, parallel computation, vision acceleration and machine learning.",
+    logo: "https://www.khronos.org/assets/images/api_logos/khronos.svg",
+    internalLink: "/specifications/KhronosGroup",
+    specs: KhronosGroup
+  }
+}
+
+export const SpecificationGroups = {
+  ...Groups
 }

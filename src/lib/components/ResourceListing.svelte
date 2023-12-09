@@ -6,17 +6,14 @@
 
 <div class="container">
   {#each dataSource as source, i}
-    <!-- TODO: Fix this -->
-    {#if i != 0 || true}
-      <ResourceCard
-        name={source.name}
-        description={source.description}
-        pdf={source.pdf}
-        html={source.html}
-        logo={source.logo}
-        internalLink={source.internalLink}
-      />
-    {/if}
+    <ResourceCard
+      name={source.name}
+      description={source.description}
+      pdf={source.pdf}
+      html={source.html}
+      logo={source.logo}
+      internalLink={source.internalLink}
+    />
   {/each}
 </div>
 

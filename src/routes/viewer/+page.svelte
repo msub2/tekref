@@ -18,7 +18,13 @@
   iframe, object {
     margin: 0 auto;
     padding: 0;
+  }
+  object {
     width: 100%;
     height: calc(100vh - 68px);
+  }
+  iframe {
+    width: calc(100vw - 4px);
+    height: calc(100vh - 72px);
   }
 </style>
