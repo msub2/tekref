@@ -150,6 +150,12 @@ const Groups = {
     logo: "https://www.khronos.org/assets/images/api_logos/khronos.svg",
     internalLink: "/specifications/KhronosGroup",
     specs: KhronosGroup
+  },
+  W3C: {
+    name: "W3C",
+    description: "The World Wide Web Consortium (W3C) develops standards and guidelines to help everyone build a web based on the principles of accessibility, internationalization, privacy and security.",
+    logo: "https://www.w3.org/assets/logos/w3c/w3c-no-bars.svg",
+    internalLink: "/specifications/w3c"
   }
 }
 

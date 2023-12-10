@@ -1,5 +1,4 @@
 <script>
-  // @ts-nocheck
   import ResourceCard from "./ResourceCard.svelte";
   export let dataSource;
 </script>
@@ -7,10 +6,10 @@
 <div class="container">
   {#each dataSource as source, i}
     <ResourceCard
-      name={source.name}
+      name={source.name ? source.name : source.title}
       description={source.description}
       pdf={source.pdf}
-      html={source.html}
+      html={source.html ? source.html : source.href ? `https://www.w3.org/TR/${source.href.substring(34)}/` : undefined}
       logo={source.logo}
       internalLink={source.internalLink}
     />
