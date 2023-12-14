@@ -2,16 +2,22 @@
   // @ts-nocheck
   import ResourceListing from "$lib/components/ResourceListing.svelte";
   import { SpecificationGroups } from "$lib/registry";
-  /** @type {import('./$types').PageData} */
+
   export let data;
+
+  let group = data.url.searchParams.get('group');
 </script>
 
+{#if !group}
+<p>No group provided</p>
+{:else}
 <main>
   <div class="spec-group">
-    <img src={SpecificationGroups[data.group].logo} alt={SpecificationGroups[data.group].name} width="100%" />
-    <ResourceListing dataSource={Object.values(SpecificationGroups[data.group].specs)} />
+    <img src={SpecificationGroups[group].logo} alt={SpecificationGroups[group].name} width="100%" />
+    <ResourceListing dataSource={Object.values(SpecificationGroups[group].specs)} />
   </div>
 </main>
+{/if}
 
 <style>
   main {

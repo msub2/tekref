@@ -9,6 +9,14 @@ const config = {
 
   kit: {
     adapter: adapter(),
+    prerender: {
+      handleHttpError: ({ path }) => {
+        if (path == "/specifications/w3c/group") {
+          // This route is fine, not sure why it throws a 500 on build
+          return;
+        }
+      }
+    }
   },
 }
 

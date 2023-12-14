@@ -148,7 +148,7 @@ const Groups = {
     name: "Khronos Group",
     description: "The Khronos Group, Inc. is an open, non-profit, member-driven consortium of 170 organizations developing, publishing and maintaining royalty-free interoperability standards for 3D graphics, virtual reality, augmented reality, parallel computation, vision acceleration and machine learning.",
     logo: "https://www.khronos.org/assets/images/api_logos/khronos.svg",
-    internalLink: "/specifications/KhronosGroup",
+    internalLink: "/specifications/group?group=KhronosGroup",
     specs: KhronosGroup
   },
   W3C: {

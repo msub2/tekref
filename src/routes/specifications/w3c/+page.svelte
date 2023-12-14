@@ -1,12 +1,11 @@
 <script>
   /** @type {import('./$types').PageData} */
   export let data;
-  console.log(data);
 </script>
 
 <main>
   {#each data.groups as group}
-    <a href="/specifications/w3c/{group.href.slice(26).replace('/', '_')}">{group.title}</a>
+    <a href="/specifications/w3c/group?link={group.href.slice(26).replace('/', '_')}">{group.title}</a>
   {/each}
 </main>
 

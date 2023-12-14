@@ -4,12 +4,16 @@
   export let data;
 
   async function getSpecs() {
+    if (!data.group) {
+      return null;
+    }
     const res = await fetch(data.group._links.specifications.href);
     return await res.json()
   }
   let specsPromise = getSpecs();
 </script>
 
+{#if data.group}
 <main>
   <h1>{data.group.name}</h1>
   <p>{data.group.description}</p>
@@ -20,6 +24,9 @@
     <ResourceListing dataSource={specs._links.specifications} />
   {/await}
 </main>
+{:else}
+<p>No group provided.</p>
+{/if}
 
 <style>
   main {
