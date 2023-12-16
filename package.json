@@ -23,7 +23,7 @@
 	"dependencies": {
 		"@sveltejs/adapter-static": "^2.0.3",
 		"@tauri-apps/api": "2.0.0-alpha.12",
-		"@tauri-apps/plugin-fs": "^2.0.0-alpha.3",
+		"@tauri-apps/plugin-fs": "^2.0.0-alpha.4",
 		"pdfjs-dist": "^4.0.269"
 	}
 }

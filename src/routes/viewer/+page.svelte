@@ -9,13 +9,23 @@
     // and inject it into an empty iframe. I also need to rewrite relative paths as absolute ones for the images to load.
     fetch(htmlData).then(res => {
       res.text().then(text => {
-        const fixedText = text.replaceAll(`src="images`, `src="${htmlData}images`).replaceAll('url(images', `url(${htmlData}images`);
+        const fixedText = text
+          .replaceAll(`src="images`, `src="${htmlData}images`)
+          .replaceAll(`src="img`, `src="${htmlData}img`)
+          .replaceAll('url(images', `url(${htmlData}images`)
+          .replaceAll('url(img', `url(${htmlData}img`);
         // @ts-ignore We know our element exists and is an iframe so ignore warnings here.
         document.getElementById('fallback').contentWindow.document.write(fixedText);
       })
     })
   }
 </script>
+
+<svelte:head>
+  <script></script>
+  <link>
+  <script></script>
+</svelte:head>
 
 {#if pdfData != null}
   <object title="pdf" data={pdfData} type="application/pdf">

@@ -33,4 +33,23 @@
     margin: 1em;
     padding: 1em;
   }
+  @media (max-width: 800px) {
+    .card {
+      width: 35%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .card {
+      width: 80%;
+    }
+  }
+
+  @media (max-width: 320px) {
+    .card {
+      width: 80%;
+    }
+  }
+
+
 </style>

@@ -4,7 +4,7 @@
   export let data;
 
   async function getSpecs() {
-    if (!data.group) {
+    if (!data.group || !data.group._links.specifications) {
       return null;
     }
     const res = await fetch(data.group._links.specifications.href);
@@ -22,6 +22,8 @@
     <p>Retrieving specifications...</p>
   {:then specs}
     <ResourceListing dataSource={specs._links.specifications} />
+  {:catch}
+    <p>This group does not have any specifications.</p>
   {/await}
 </main>
 {:else}

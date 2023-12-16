@@ -12,11 +12,9 @@
   },
   "plugins": {
     "fs": {
-      "scope": [
-        "$APPLOCALDATA/**",
-        "$APPLOCALDATA/*",
-        "$APPLOCALDATA"
-      ]
+      "scope": {
+        "allow": ["**"]
+      }
     }
   },
   "tauri": {

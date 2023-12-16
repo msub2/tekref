@@ -70,6 +70,7 @@ dependencies = [
  "serde_json",
  "tauri",
  "tauri-build",
+ "tauri-plugin-fs",
 ]
 
 [[package]]
@@ -3378,6 +3379,20 @@ dependencies = [
  "syn 2.0.39",
  "tauri-codegen",
  "tauri-utils",
+]
+
+[[package]]
+name = "tauri-plugin-fs"
+version = "2.0.0-alpha.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "330c81479fdc92bab8609d896249e016404f9fac24a27ddf66e1daafd4db1a35"
+dependencies = [
+ "anyhow",
+ "glob",
+ "serde",
+ "tauri",
+ "thiserror",
+ "uuid",
 ]
 
 [[package]]
