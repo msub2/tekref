@@ -48,6 +48,9 @@
       display: block;
       font-size: 2em;
     }
+    #hamburger > summary::-webkit-details-marker {
+      display: none;
+    }
     #hamburger[open] {
       background: rgb(127, 127, 127);
     }
